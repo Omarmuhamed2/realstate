@@ -14,7 +14,6 @@ const routes: Routes = [
   { path: 'category/:type/:area', component: AreaComponent },
   { path: 'property/:id', component: PropertyDetailComponent },
    { path: 'admin-login', component: AdminLoginComponent },
-  { path: 'admin', component: AdminComponent },
    {
     path: 'admin',
     component: AdminComponent,

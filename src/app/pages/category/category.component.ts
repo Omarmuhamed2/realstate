@@ -111,7 +111,8 @@ export class CategoryComponent implements OnInit {
 
     if (!prop?.id) return;
 
-    const propertyUrl = `${window.location.origin}/property/${prop.id}`;
+const base = document.querySelector('base')?.href || window.location.origin + '/';
+const propertyUrl = new URL(`property/${prop.id}`, base).toString();
 
     const text =
       `السلام عليكم، أنا مهتم بالوحدة دي:\n` +
