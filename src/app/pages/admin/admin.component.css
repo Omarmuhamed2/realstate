@@ -1,0 +1,206 @@
+.admin-title {
+  margin-bottom: 16px;
+  font-size: 1.5rem;
+}
+
+.admin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 500px;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.form-row label {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.form-row input,
+.form-row select,
+.form-row textarea {
+  background-color: #11141c;
+  border: 1px solid var(--border-soft);
+  border-radius: 8px;
+  padding: 8px 10px;
+  color: var(--text-main);
+  font-size: 0.9rem;
+}
+
+.form-row input:focus,
+.form-row select:focus,
+.form-row textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+button[type='submit'] {
+  margin-top: 8px;
+  align-self: flex-start;
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: none;
+  background-color: var(--primary);
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+button[disabled] {
+  opacity: 0.7;
+  cursor: default;
+}
+
+.message {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+.properties-admin {
+  margin-top: 2rem;
+}
+
+.property-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.property-row h3 {
+  margin: 0;
+}
+
+.property-row p {
+  margin: 0.25rem 0 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.delete-btn {
+  border: none;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: #e53935;
+  color: #fff;
+}
+.delete-btn:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+.back-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end; /* يحطه على الشمال */
+  margin-bottom: 15px;
+}
+
+.back-btn {
+  background: var(--bg-elevated, #2a2a2a);
+  border: 1px solid var(--border-soft, #444);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: 0.2s;
+}
+
+.back-btn:hover {
+  background: var(--primary);
+  color: #000;
+  border-color: var(--primary);
+}
+/* =============== RESPONSIVE DESIGN =============== */
+
+/* 📱 Screens under 768px (Mobile) */
+@media (max-width: 768px) {
+
+  .admin-form {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .admin-title {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .form-row input,
+  .form-row select,
+  .form-row textarea {
+    font-size: 0.85rem;
+    padding: 7px 9px;
+  }
+
+  button[type='submit'] {
+    width: 100%;
+    align-self: center;
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  /* قائمة الوحدات */
+  .property-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    padding: 10px 0;
+  }
+
+  .property-row h3 {
+    font-size: 1rem;
+  }
+
+  .property-row p {
+    font-size: 0.85rem;
+  }
+
+  .delete-btn {
+    width: 100%;
+    padding: 8px;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  /* زر الرجوع */
+  .back-container {
+    justify-content: flex-end !important; /* ثابت على الشمال */
+  }
+
+  .back-btn {
+    padding: 7px 14px;
+    font-size: 0.85rem;
+  }
+}
+
+/* 📱 موبيل أصغر من 480px */
+@media (max-width: 480px) {
+  .admin-title {
+    font-size: 1.1rem;
+  }
+
+  .form-row label {
+    font-size: 0.8rem;
+  }
+
+  .property-row p {
+    font-size: 0.8rem;
+  }
+
+  .delete-btn {
+    font-size: 0.85rem;
+  }
+}
+
+
+
+

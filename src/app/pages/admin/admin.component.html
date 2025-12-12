@@ -1,0 +1,94 @@
+
+<div class="back-container">
+  <button class="back-btn" (click)="goBack()">⬅ رجوع</button>
+</div>
+<div class="page-wrapper">
+  <h1 class="admin-title">لوحة التحكم - إضافة وحدة عقارية</h1>
+
+  <form [formGroup]="propertyForm" (ngSubmit)="onSubmit()" class="admin-form card">
+    <div class="form-row">
+      <label>نوع الوحدة:</label>
+      <select formControlName="category">
+        <option *ngFor="let c of categories" [value]="c.value">
+          {{ c.label }}
+        </option>
+      </select>
+    </div>
+
+   <div class="form-row" *ngIf="isTouristSelected">
+  <label>المنطقة:</label>
+  <select formControlName="areaId">
+    <option *ngFor="let a of areas" [value]="a.value">
+      {{ a.label }}
+    </option>
+  </select>
+</div>
+
+
+    <div class="form-row">
+      <label>عدد الغرف:</label>
+     <select formControlName="rooms">
+  <option *ngFor="let r of roomOptions" [ngValue]="r">
+    {{ r }} غرفة + صالة
+  </option>
+</select>
+
+    </div>
+
+    <div class="form-row">
+      <label>عنوان الوحدة:</label>
+      <input type="text" formControlName="title" />
+    </div>
+
+    <div class="form-row">
+      <label>وصف الوحدة:</label>
+      <textarea rows="3" formControlName="description"></textarea>
+    </div>
+
+    <div class="form-row">
+  <label>صور الوحدة:</label>
+  <input
+    type="file"
+    (change)="onFileSelected($event)"
+    accept="image/*"
+    multiple
+  />
+</div>
+
+
+    <button type="submit" [disabled]="isSubmitting">
+      {{ isSubmitting ? 'جاري الحفظ...' : 'حفظ الوحدة' }}
+    </button>
+
+    <p class="message" *ngIf="message">{{ message }}</p>
+  </form>
+  <section class="properties-admin card">
+    <h2>الوحدات المسجلة</h2>
+
+    <p *ngIf="isLoadingList">جاري تحميل الوحدات...</p>
+    <p *ngIf="listError" class="error">{{ listError }}</p>
+
+    <p *ngIf="!isLoadingList && !listError && properties.length === 0">
+      لا توجد وحدات مسجلة حتى الآن.
+    </p>
+
+    <div class="property-row" *ngFor="let prop of properties">
+      <div class="info">
+        <h3>{{ prop.title }}</h3>
+        <p>
+          نوع: {{ prop.category }} |
+          منطقة: {{ prop.areaId }} |
+          غرف: {{ prop.rooms }}
+        </p>
+      </div>
+
+      <button
+        class="delete-btn"
+        [disabled]="deletingId === prop.id"
+        (click)="onDeleteProperty(prop)"
+      >
+        {{ deletingId === prop.id ? 'جاري الحذف...' : 'حذف' }}
+      </button>
+    </div>
+  </section>
+</div>

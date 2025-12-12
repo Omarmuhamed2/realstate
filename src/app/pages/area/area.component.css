@@ -1,0 +1,442 @@
+/* العنوان فوق */
+.area-header {
+  margin-bottom: 20px;
+}
+
+.area-header h1 {
+  font-size: 1.6rem;
+  margin-bottom: 6px;
+  color: #ffffff;
+}
+
+.area-header p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+/* الفلاتر */
+.filters {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.filter-label {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-main);
+}
+
+.filters button {
+  border: 1px solid var(--border-soft);
+  background-color: var(--bg-elevated);
+  border-radius: 999px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease,
+    transform 0.1s ease;
+}
+
+.filters button:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  transform: translateY(-1px);
+}
+
+.filters button.active {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: #000;
+}
+
+/* 🔥 هنا التحكم في شكل الكروت + الشبكة */
+.properties {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+/* الصورة ثابتة الحجم في كل الكروت */
+.prop-image {
+  width: 100%;
+  height: 200px;      /* تقدر تغيّرها لـ 180 / 220 حسب ما يعجبك */
+  object-fit: cover;  /* تقص الصورة عشان تملى المساحة من غير ما تتمط */
+  border-radius: 10px;
+  margin-bottom: 8px;
+}
+
+/* عنوان الوحدة */
+.property-card h2 {
+  font-size: 1.05rem;
+  margin-bottom: 6px;
+  color: #ffffff;
+}
+
+/* الوصف */
+.property-card .desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+
+  /* اختياري: قص الوصف على 3 سطور عشان الكروت ما تطولش قوي */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* رسالة "لا توجد وحدات" */
+.no-results {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+.back-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end; /* يحطه على الشمال */
+  margin-bottom: 15px;
+}
+
+.back-btn {
+  background: var(--bg-elevated, #2a2a2a);
+  border: 1px solid var(--border-soft, #444);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: 0.2s;
+}
+
+.back-btn:hover {
+  background: var(--primary);
+  color: #000;
+  border-color: var(--primary);
+}
+
+/* =============================
+     📱 RESPONSIVE DESIGN
+   ============================= */
+
+/* تابلت وموبايل لحد 768px */
+@media (max-width: 768px) {
+
+  /* الهيدر */
+  .area-header h1 {
+    font-size: 1.3rem;
+  }
+
+  .area-header p {
+    font-size: 0.85rem;
+  }
+
+  /* الفلاتر */
+  .filters {
+    gap: 6px;
+  }
+
+  .filters button {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+  }
+
+  /* الكروت: خليها عمود واحد */
+  .properties {
+    grid-template-columns: 1fr !important;
+    gap: 14px;
+  }
+
+  /* الصور */
+  .prop-image {
+    height: 180px;
+  }
+
+  .property-card h2 {
+    font-size: 1rem;
+  }
+
+  .property-card .desc {
+    font-size: 0.85rem;
+  }
+
+  /* زر الرجوع */
+  .back-container {
+    justify-content: flex-start !important;
+  }
+
+  .back-btn {
+    font-size: 0.85rem;
+    padding: 7px 12px;
+  }
+}
+
+/* موبايل صغير تحت 480px */
+@media (max-width: 480px) {
+
+  .area-header h1 {
+    font-size: 1.15rem;
+  }
+
+  .filters button {
+    font-size: 0.75rem;
+    padding: 4px 10px;
+  }
+
+  .prop-image {
+    height: 160px;
+  }
+
+  .property-card h2 {
+    font-size: 0.95rem;
+  }
+
+  .property-card .desc {
+    font-size: 0.8rem;
+  }
+}
+
+/* شاشات قديمة صغيرة جداً 360px */
+@media (max-width: 360px) {
+  .filters button {
+    font-size: 0.7rem;
+    padding: 4px 8px;
+  }
+
+  .prop-image {
+    height: 150px;
+  }
+}
+/* =============================
+     📱 RESPONSIVE DESIGN
+   ============================= */
+
+/* تابلت وموبايل لحد 768px */
+@media (max-width: 768px) {
+
+  /* العنوان */
+  .category-header h1 {
+    font-size: 1.4rem;
+  }
+
+  .category-header p {
+    font-size: 0.85rem;
+  }
+
+  /* الشبكة: خليها عمود واحد */
+  .areas-grid,
+  .properties {
+    grid-template-columns: 1fr !important;
+    gap: 14px;
+  }
+
+  /* منطقة الكارد */
+  .area-card h2 {
+    font-size: 1rem;
+  }
+
+  .area-card p {
+    font-size: 0.85rem;
+  }
+
+  .area-card .cta {
+    font-size: 0.8rem;
+  }
+
+  /* كروت العقارات */
+  .property-card h2 {
+    font-size: 1rem;
+  }
+
+  .property-card .desc {
+    font-size: 0.85rem;
+  }
+
+  .property-card .meta {
+    font-size: 0.8rem;
+  }
+
+  /* الصور */
+  .prop-image {
+    height: 170px;
+  }
+
+  /* زر الرجوع */
+  .back-container {
+    justify-content: flex-end !important;
+  }
+
+  .back-btn {
+    font-size: 0.85rem;
+    padding: 7px 12px;
+  }
+}
+/* WhatsApp icon on each property card */
+.property-card {
+  position: relative;
+}
+
+.area-header { margin-bottom: 20px; }
+.area-header h1 { font-size: 1.6rem; margin-bottom: 6px; color: #ffffff; }
+.area-header p { font-size: 0.95rem; color: var(--text-muted); }
+
+.filters{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-bottom:20px;
+}
+.filter-label{ font-size:0.95rem; font-weight:500; color: var(--text-main); }
+
+.filters button{
+  border:1px solid var(--border-soft);
+  background-color: var(--bg-elevated);
+  border-radius:999px;
+  padding:6px 12px;
+  cursor:pointer;
+  font-size:0.9rem;
+  color: var(--text-muted);
+  transition: .2s;
+}
+.filters button:hover{ border-color: var(--primary); color: var(--primary); transform: translateY(-1px); }
+.filters button.active{ background-color: var(--primary); border-color: var(--primary); color:#000; }
+
+.properties{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap:16px;
+}
+
+.property-card{
+  display:flex;
+  flex-direction:column;
+}
+
+.prop-image{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+  border-radius:10px;
+  margin-bottom:8px;
+}
+
+.property-card h2{ font-size:1.05rem; margin-bottom:6px; color:#ffffff; }
+.property-card .desc{
+  font-size:0.9rem;
+  color: var(--text-muted);
+  display:-webkit-box;
+  -webkit-box-orient: vertical;
+  overflow:hidden;
+}
+.no-results{ font-size:0.95rem; color: var(--text-muted); }
+
+.back-container{
+  width:100%;
+  display:flex;
+  justify-content:flex-end;
+  margin-bottom:15px;
+}
+.back-btn{
+  background: var(--bg-elevated, #2a2a2a);
+  border: 1px solid var(--border-soft, #444);
+  color:#fff;
+  padding:8px 16px;
+  border-radius:8px;
+  cursor:pointer;
+  font-size:0.9rem;
+  transition: .2s;
+}
+.back-btn:hover{
+  background: var(--primary);
+  color:#000;
+  border-color: var(--primary);
+}
+
+/* ✅ زر واتساب تحت */
+.card-actions{
+  margin-top: 12px;
+  display:flex;
+  justify-content:flex-start; /* لو عايزه يمين: flex-end */
+}
+
+.wa-action{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 12px;
+  border-radius:999px;
+  border:1px solid #25D366;
+  color:#25D366;
+  background: rgba(0,0,0,0.25);
+  text-decoration:none;
+  font-size:0.9rem;
+  font-weight:600;
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+}
+.wa-action svg{ width:18px; height:18px; }
+.wa-action:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.25);
+  background: rgba(37, 211, 102, 0.10);
+}
+
+@media (max-width: 768px){
+  .properties{ grid-template-columns: 1fr !important; gap:14px; }
+  .prop-image{ height:180px; }
+  .area-header h1{ font-size:1.3rem; }
+  .area-header p{ font-size:0.85rem; }
+}
+@media (max-width: 480px){
+  .prop-image{ height:160px; }
+  .area-header h1{ font-size:1.15rem; }
+  .filters button{ font-size:0.75rem; padding:4px 10px; }
+}
+
+
+
+/* موبايل صغير تحت 480px */
+@media (max-width: 480px) {
+
+  .category-header h1 {
+    font-size: 1.25rem;
+  }
+
+  .area-card h2 {
+    font-size: 0.95rem;
+  }
+
+  .area-card p {
+    font-size: 0.8rem;
+  }
+
+  .prop-image {
+    height: 150px;
+  }
+
+  .property-card h2 {
+    font-size: 0.95rem;
+  }
+
+  .property-card .desc {
+    font-size: 0.8rem;
+  }
+}
+
+/* شاشات قديمة صغيرة جداً 360px */
+@media (max-width: 360px) {
+  .prop-image {
+    height: 140px;
+  }
+
+  .property-card h2,
+  .area-card h2 {
+    font-size: 0.9rem;
+  }
+
+  .property-card .desc,
+  .area-card p {
+    font-size: 0.75rem;
+  }
+}

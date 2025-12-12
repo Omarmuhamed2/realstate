@@ -1,0 +1,125 @@
+.main-image-wrapper {
+  width: 100%;
+  cursor: zoom-in;
+}
+
+.main-image {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.thumbs {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+}
+
+.thumb {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+  opacity: 0.6;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.thumb.active {
+  border: 2px solid var(--primary);
+  opacity: 1;
+}
+
+.thumb:hover {
+  opacity: 1;
+}
+
+/* زووم fullscreen */
+.zoom-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-out;
+  z-index: 9999;
+}
+
+.zoomed-img {
+  max-width: 95%;
+  max-height: 95%;
+  border-radius: 10px;
+}
+.back-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end; /* يحطه على الشمال */
+  margin-bottom: 15px;
+}
+
+.back-btn {
+  background: var(--bg-elevated, #2a2a2a);
+  border: 1px solid var(--border-soft, #444);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: 0.2s;
+}
+
+.back-btn:hover {
+  background: var(--primary);
+  color: #000;
+  border-color: var(--primary);
+}
+@media (max-width: 768px) {
+
+  .main-image {
+    height: 260px;
+  }
+
+  .thumb {
+    width: 70px;
+    height: 52px;
+  }
+
+  .back-btn {
+    font-size: 0.85rem;
+    padding: 7px 12px;
+  }
+}
+
+/* موبايل صغير تحت 480px */
+@media (max-width: 480px) {
+
+  .main-image {
+    height: 220px;
+  }
+
+  .thumb {
+    width: 60px;
+    height: 46px;
+  }
+
+  .zoomed-img {
+    max-width: 100%;
+    max-height: 90%;
+  }
+}
+
+/* شاشات صغيرة جداً 360px */
+@media (max-width: 360px) {
+
+  .main-image {
+    height: 200px;
+  }
+
+  .thumb {
+    width: 55px;
+    height: 40px;
+  }
+}

@@ -1,0 +1,404 @@
+.category-header {
+  margin-bottom: 20px;
+}
+
+.category-header h1 {
+  font-size: 1.7rem;
+  margin-bottom: 6px;
+  color: #ffffff;
+}
+
+.category-header p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.areas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.area-card h2 {
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+  color: #ffffff;
+}
+
+.area-card p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+.area-card .cta {
+  font-size: 0.85rem;
+  color: var(--primary);
+  font-weight: 500;
+}
+.properties {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+/* الكارد */
+.property-card {
+  margin-bottom: 0;      /* مش محتاج margin تحت عشان فيه gap من الـ grid */
+}
+
+/* عنوان الوحدة */
+.property-card h2 {
+  font-size: 1.05rem;
+  margin-bottom: 6px;
+  color: #ffffff;
+}
+
+/* وصف الوحدة */
+.property-card .desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* سطر عدد الغرف */
+.property-card .meta {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* الصورة بحجم ثابت */
+.prop-image {
+  width: 100%;
+  height: 180px;      /* هنا بتحدد ارتفاع الصورة الثابت */
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 8px;
+}
+.back-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end; /* يحطه على الشمال */
+  margin-bottom: 15px;
+}
+
+.back-btn {
+  background: var(--bg-elevated, #2a2a2a);
+  border: 1px solid var(--border-soft, #444);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: 0.2s;
+}
+
+.back-btn:hover {
+  background: var(--primary);
+  color: #000;
+  border-color: var(--primary);
+}
+
+/* ====== الأساسيات ====== */
+
+.category-header {
+  margin-bottom: 20px;
+}
+
+.category-header h1 {
+  font-size: 1.7rem;
+  margin-bottom: 6px;
+  color: #ffffff;
+}
+
+.category-header p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.areas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.area-card h2 {
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+  color: #ffffff;
+}
+
+.area-card p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+.area-card .cta {
+  font-size: 0.85rem;
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.properties {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+/* الكارد */
+.property-card {
+  margin-bottom: 0; /* مش محتاج margin تحت عشان فيه gap من الـ grid */
+}
+
+/* عنوان الوحدة */
+.property-card h2 {
+  font-size: 1.05rem;
+  margin-bottom: 6px;
+  color: #ffffff;
+}
+
+/* وصف الوحدة */
+.property-card .desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* سطر عدد الغرف */
+.property-card .meta {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* الصورة بحجم ثابت */
+.prop-image {
+  width: 100%;
+  height: 180px;      /* هنا بتحدد ارتفاع الصورة الثابت */
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 8px;
+}
+
+/* زر الرجوع */
+.back-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end; /* ✅ فعلاً على الشمال */
+  margin-bottom: 15px;
+}
+
+.back-btn {
+  background: var(--bg-elevated, #2a2a2a);
+  border: 1px solid var(--border-soft, #444);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: 0.2s;
+}
+
+.back-btn:hover {
+  background: var(--primary);
+  color: #000;
+  border-color: var(--primary);
+}
+.category-header { margin-bottom: 20px; }
+.category-header h1 { font-size: 1.7rem; margin-bottom: 6px; color: #ffffff; }
+.category-header p { font-size: 0.95rem; color: var(--text-muted); }
+
+.areas-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap:16px;
+}
+.area-card h2{ font-size:1.1rem; margin-bottom:6px; color:#ffffff; }
+.area-card p{ font-size:0.9rem; color: var(--text-muted); margin-bottom:10px; }
+.area-card .cta{ font-size:0.85rem; color: var(--primary); font-weight:500; }
+
+.properties{
+  margin-top:2rem;
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap:16px;
+}
+
+.property-card{ margin-bottom:0; display:flex; flex-direction:column; }
+.property-card h2{ font-size:1.05rem; margin-bottom:6px; color:#ffffff; }
+.property-card .desc{ font-size:0.9rem; color: var(--text-muted); }
+.property-card .meta{ margin-top:0.5rem; font-size:0.9rem; color:#555; }
+
+.prop-image{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  border-radius:10px;
+  margin-bottom:8px;
+}
+
+.back-container{
+  width:100%;
+  display:flex;
+  justify-content:flex-end;
+  margin-bottom:15px;
+}
+.back-btn{
+  background: var(--bg-elevated, #2a2a2a);
+  border: 1px solid var(--border-soft, #444);
+  color:#fff;
+  padding:8px 16px;
+  border-radius:8px;
+  cursor:pointer;
+  font-size:0.9rem;
+  transition:0.2s;
+}
+.back-btn:hover{
+  background: var(--primary);
+  color:#000;
+  border-color: var(--primary);
+}
+
+/* ✅ WhatsApp تحت الكارد */
+.card-actions{
+  margin-top: 12px;
+  display:flex;
+  justify-content:flex-start; /* لو عايزه يمين: flex-end */
+}
+
+.wa-action{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 12px;
+  border-radius:999px;
+  border:1px solid #25D366;
+  color:#25D366;
+  background: rgba(0,0,0,0.25);
+  text-decoration:none;
+  font-size:0.9rem;
+  font-weight:600;
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+}
+.wa-action svg{ width:18px; height:18px; }
+.wa-action:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.25);
+  background: rgba(37, 211, 102, 0.10);
+}
+
+@media (max-width: 768px){
+  .areas-grid, .properties{ grid-template-columns: 1fr; gap:14px; }
+  .category-header h1{ font-size:1.4rem; }
+  .category-header p{ font-size:0.85rem; }
+  .prop-image{ height:170px; }
+}
+@media (max-width: 480px){
+  .category-header h1{ font-size:1.25rem; }
+  .prop-image{ height:150px; }
+}
+
+
+/* =============================
+     📱 RESPONSIVE DESIGN
+   ============================= */
+
+/* تابلت وموبايل لحد 768px */
+@media (max-width: 768px) {
+
+  .category-header h1 {
+    font-size: 1.4rem;
+  }
+
+  .category-header p {
+    font-size: 0.85rem;
+  }
+
+  .areas-grid,
+  .properties {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .area-card h2 {
+    font-size: 1rem;
+  }
+
+  .area-card p {
+    font-size: 0.85rem;
+  }
+
+  .area-card .cta {
+    font-size: 0.8rem;
+  }
+
+  .property-card h2 {
+    font-size: 1rem;
+  }
+
+  .property-card .desc {
+    font-size: 0.85rem;
+  }
+
+  .property-card .meta {
+    font-size: 0.8rem;
+  }
+
+  .prop-image {
+    height: 170px;
+  }
+
+  .back-btn {
+    font-size: 0.85rem;
+    padding: 7px 12px;
+  }
+}
+
+/* موبايل صغير تحت 480px */
+@media (max-width: 480px) {
+
+  .category-header h1 {
+    font-size: 1.25rem;
+  }
+
+  .area-card h2 {
+    font-size: 0.95rem;
+  }
+
+  .area-card p {
+    font-size: 0.8rem;
+  }
+
+  .prop-image {
+    height: 150px;
+  }
+
+  .property-card h2 {
+    font-size: 0.95rem;
+  }
+
+  .property-card .desc {
+    font-size: 0.8rem;
+  }
+}
+
+/* شاشات قديمة صغيرة جداً 360px */
+@media (max-width: 360px) {
+
+  .prop-image {
+    height: 140px;
+  }
+
+  .property-card h2,
+  .area-card h2 {
+    font-size: 0.9rem;
+  }
+
+  .property-card .desc,
+  .area-card p {
+    font-size: 0.75rem;
+  }
+}
+

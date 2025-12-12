@@ -1,0 +1,10 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  /* خلي الخلفية شفافة عشان ما تغطيش الصورة */
+  background-color: transparent;
+}
+
+.app-wrapper {
+  min-height: 100vh;
+}

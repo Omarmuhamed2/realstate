@@ -1,0 +1,57 @@
+<div class="page-wrapper" dir="rtl">
+  <!-- ✅ About يظهر أول ما يفتح الموقع -->
+  <section class="about-hero card">
+    <div class="about-top">      <div class="about-top-text">
+        <h1 class="about-name">{{ about.name }}</h1>
+        <p class="about-meta">
+          {{ about.company }} • {{ about.location }} • خبرة {{ about.experienceYears }}+ سنوات
+        </p>
+      </div>
+    </div>
+
+    <div class="about-body">
+      <img class="about-photo" [src]="about.photoUrl" [alt]="about.name" />
+      <div>
+        <p class="about-headline">{{ about.headline }}</p>
+        <p class="about-bio">{{ about.bio }}</p>
+
+        <a
+
+  class="social-icon whatsapp-icon"
+  href="https://wa.me/905076751611"
+  target="_blank"
+  rel="noopener"
+  aria-label="WhatsApp"
+>
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M12 2C6.477 2 2 6.24 2 11.5c0 1.94.557 3.73 1.52 5.28L2 22l5.37-1.49A10.4 10.4 0 0 0 12 21c5.523 0 10-4.24 10-9.5S17.523 2 12 2zm0 2c4.41 0 8 3.33 8 7.5S16.41 19 12 19c-1.48 0-2.9-.36-4.12-1.05l-.3-.17-3.08.86.9-2.96-.2-.3C4.45 14.23 4 12.9 4 11.5 4 7.33 7.59 4 12 4zm-3 3.75c-.18 0-.46.06-.71.32-.25.26-.93.9-.93 2.2 0 1.3.83 2.55.95 2.72.12.17 1.63 2.6 4.02 3.55 2.38.95 2.64.66 3.12.62.48-.04 1.54-.63 1.76-1.25.22-.62.22-1.15.15-1.26-.07-.11-.26-.18-.55-.32-.29-.14-1.7-.84-1.96-.94-.26-.1-.45-.15-.63.09-.18.24-.7.9-.86 1.08-.16.18-.3.2-.56.07-.26-.13-1.08-.46-2.06-1.37-.76-.69-1.27-1.54-1.42-1.8-.15-.26-.02-.4.12-.55.13-.15.3-.37.44-.56.14-.19.19-.32.28-.53.09-.21.05-.4-.02-.54-.07-.14-.52-1.28-.72-1.7-.14-.3-.29-.33-.44-.33z"/>
+  </svg>
+</a>
+<p>تواصل معنا</p>
+      </div>
+
+    </div>
+
+
+  </section>
+
+  <!-- اللي عندك زي ما هو -->
+  <header class="hero">
+    <h1>ابحث عن وحدتك بسهولة</h1>
+    <p>
+      اختر نوع الوحدة اللي يناسبك من الخيارات الموجودة، واستعرض الشقق حسب المنطقة وعدد الغرف.
+    </p>
+  </header>
+
+  <section class="categories-grid">
+    <div
+      class="category-card card"
+      *ngFor="let cat of categories"
+      (click)="goToCategory(cat.route)"
+    >
+      <h2>{{ cat.title }}</h2>
+      <p>{{ cat.subtitle }}</p>
+      <span class="cta">استعراض الوحدات →</span>
+    </div>
+  </section>
+</div>

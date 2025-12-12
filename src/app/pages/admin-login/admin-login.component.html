@@ -1,0 +1,23 @@
+<div class="back-container">
+  <button class="back-btn" (click)="goBack()">⬅ رجوع</button>
+</div>
+<div class="page-wrapper">
+  <form (ngSubmit)="onSubmit()" class="admin-form card">
+    <h1 class="admin-title">تسجيل دخول المسؤول</h1>
+
+    <div class="form-row">
+      <label>الرقم السري:</label>
+      <input
+        type="password"
+        [(ngModel)]="pin"
+        name="pin"
+        placeholder="أدخل كلمة المرور"
+        required
+      />
+    </div>
+
+    <button type="submit">دخول</button>
+
+    <p class="error" *ngIf="error">{{ error }}</p>
+  </form>
+</div>

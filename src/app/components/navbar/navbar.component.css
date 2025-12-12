@@ -1,0 +1,177 @@
+.navbar {
+  height: 70px;
+  background: linear-gradient(90deg, #11131a, #181b22);
+  border-bottom: 1px solid var(--border-soft);
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.company-name {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: 0.05em;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.nav-links li {
+  font-size: 0.95rem;
+}
+
+.nav-links a {
+  padding: 6px 12px;
+  border-radius: 999px;
+  color: var(--text-muted);
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.1s ease;
+}
+
+.nav-links a:hover {
+  background-color: rgba(212, 175, 55, 0.12);
+  color: var(--primary);
+  transform: translateY(-1px);
+}
+
+.admin-link {
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+
+.admin-link:hover {
+  background-color: var(--primary);
+  color: #000;
+}
+.logout-btn {
+  background: #ff4d4d;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: white;
+  transition: 0.2s;
+}
+
+.logout-btn:hover {
+  background: #ff2424;
+}
+/* =============================
+     📱 RESPONSIVE NAVBAR
+   ============================= */
+
+/* تابلت ولابتوب صغير لحد 900px */
+@media (max-width: 900px) {
+  .navbar {
+    padding: 0 16px;
+  }
+
+  .company-name {
+    font-size: 1.1rem;
+  }
+
+  .nav-links {
+    gap: 12px;
+  }
+
+  .nav-links li {
+    font-size: 0.9rem;
+  }
+
+  .nav-links a {
+    padding: 5px 10px;
+  }
+}
+
+/* موبايل + تابلت صغير لحد 700px */
+@media (max-width: 700px) {
+  .navbar {
+    height: auto;
+    padding: 8px 12px;
+    flex-wrap: wrap;
+    row-gap: 8px;
+  }
+
+  .logo {
+    flex: 1 0 100%;
+    justify-content: flex-start;
+  }
+
+  .nav-links {
+    flex: 1 0 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .nav-links li {
+    font-size: 0.85rem;
+  }
+
+  .nav-links a {
+    padding: 4px 9px;
+  }
+
+  .company-name {
+    font-size: 1rem;
+  }
+
+  .logo img {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+/* موبايل صغير تحت 480px */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 6px 8px;
+  }
+
+  .company-name {
+    font-size: 0.95rem;
+    letter-spacing: 0.03em;
+  }
+
+  .nav-links {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 6px;
+  }
+
+  .nav-links li {
+    flex: 0 0 auto;
+  }
+
+  .nav-links a {
+    white-space: nowrap;
+    font-size: 0.8rem;
+    padding: 4px 8px;
+  }
+
+  .logout-btn {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+}

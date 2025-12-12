@@ -1,0 +1,262 @@
+.hero {
+  margin-bottom: 24px;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+.hero p {
+  font-size: 0.98rem;
+  color: var(--text-muted);
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 16px;
+}
+
+.category-card h2 {
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+  color: #ffffff;
+}
+
+.category-card p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+.category-card .cta {
+  font-size: 0.85rem;
+  color: var(--primary);
+  font-weight: 500;
+}
+.properties {
+  margin-top: 2rem;
+}
+
+.property-card {
+  margin-bottom: 1rem;
+}
+
+.property-card .meta {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+.back-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end; /* يحطه على الشمال */
+  margin-bottom: 15px;
+}
+
+.back-btn {
+  background: var(--bg-elevated, #2a2a2a);
+  border: 1px solid var(--border-soft, #444);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: 0.2s;
+}
+
+.back-btn:hover {
+  background: var(--primary);
+  color: #000;
+  border-color: var(--primary);
+}
+.about-hero {
+  margin-bottom: 18px;
+  padding: 16px;
+}
+
+.about-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.about-logo {
+  width: 54px;
+  height: 54px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.about-name {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #ffffff;
+}
+
+.about-meta {
+  margin: 4px 0 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.about-body {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 14px;
+  align-items: start;
+}
+
+.about-photo {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.about-headline {
+  margin: 0 0 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.about-bio {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.9;
+  color: var(--text-muted);
+}
+
+.whatsapp-icon {
+  border-color: #25D366;
+  color: #25D366;
+}
+.whatsapp-icon:hover{
+  border-color: #25D366;
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.35);
+}
+/* صغر أيقونة الواتساب جوه about بس */
+.about-hero .social-icon.whatsapp-icon{
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.about-hero .social-icon.whatsapp-icon svg{
+  width: 18px;
+  height: 18px;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-body {
+    grid-template-columns: 1fr;
+  }
+  .about-photo {
+    height: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-name {
+    font-size: 1.15rem;
+  }
+  .about-bio {
+    font-size: 0.85rem;
+  }
+  .about-photo {
+    height: 190px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+
+  .categories-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .category-card h2 {
+    font-size: 1rem;
+  }
+
+  .category-card p {
+    font-size: 0.85rem;
+  }
+
+  .category-card .cta {
+    font-size: 0.8rem;
+  }
+
+  .property-card .meta {
+    font-size: 0.85rem;
+  }
+
+  .back-btn {
+    font-size: 0.85rem;
+    padding: 7px 12px;
+  }
+}
+
+/* موبايل صغير تحت 480px */
+@media (max-width: 480px) {
+
+  .hero h1 {
+    font-size: 1.4rem;
+  }
+
+  .hero p {
+    font-size: 0.85rem;
+  }
+
+  .category-card h2 {
+    font-size: 0.95rem;
+  }
+
+  .category-card p {
+    font-size: 0.8rem;
+  }
+
+  .property-card .meta {
+    font-size: 0.8rem;
+  }
+}
+
+/* شاشات صغيرة جدًا 360px */
+@media (max-width: 360px) {
+
+  .hero h1 {
+    font-size: 1.3rem;
+  }
+
+  .hero p {
+    font-size: 0.8rem;
+  }
+
+  .category-card h2 {
+    font-size: 0.9rem;
+  }
+
+  .category-card p {
+    font-size: 0.75rem;
+  }
+}
+

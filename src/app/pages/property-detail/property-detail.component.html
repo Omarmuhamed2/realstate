@@ -1,0 +1,32 @@
+<div class="back-container">
+  <button class="back-btn" (click)="goBack()">⬅ رجوع</button>
+</div>
+<div class="page-wrapper" *ngIf="property && images.length">
+
+  <!-- الصورة الأساسية -->
+  <div class="main-image-wrapper"
+       (click)="openImage(images[activeIndex])">
+    <img
+      [src]="images[activeIndex]"
+      class="main-image"
+      alt="image"
+    />
+  </div>
+
+  <!-- الصور الصغيرة (thumbnails) -->
+  <div class="thumbs">
+    <img
+      *ngFor="let img of images; let i = index"
+      [src]="img"
+      class="thumb"
+      [class.active]="i === activeIndex"
+      (click)="activeIndex = i"
+    />
+  </div>
+
+</div>
+
+<!-- نافذة الزووم -->
+<div class="zoom-overlay" *ngIf="zoomImage" (click)="closeZoom()">
+  <img [src]="zoomImage" class="zoomed-img" />
+</div>

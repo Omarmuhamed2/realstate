@@ -1,0 +1,29 @@
+<section class="about-page" dir="rtl">
+  <div class="about-card">
+    <div class="header">
+      <img class="logo" [src]="companyLogoUrl" [alt]="company" />
+      <div class="company-text">
+        <p class="company">{{ company }}</p>
+        <p class="location">{{ location }} • خبرة {{ experienceYears }}+ سنوات</p>
+      </div>
+    </div>
+
+    <div class="body">
+      <div class="photo">
+        <img [src]="personPhotoUrl" [alt]="name" />
+      </div>
+
+      <div class="content">
+        <h1 class="name">{{ name }}</h1>
+        <p class="headline">{{ headline }}</p>
+
+        <p class="bio">{{ bio }}</p>
+
+        <h3>{{ servicesTitle }}</h3>
+        <ul class="list">
+          <li *ngFor="let s of services">{{ s }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
